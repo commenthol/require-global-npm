@@ -1,0 +1,29 @@
+{
+  "name": "require-global-npm",
+  "version": "1.0.0-0",
+  "description": "require npm from the global install",
+  "keywords": [
+    "global",
+    "npm",
+    "require"
+  ],
+  "homepage": "https://github.com/commenthol/require-global-npm#readme",
+  "bugs": {
+    "url": "https://github.com/commenthol/require-global-npm/issues"
+  },
+  "license": "Unlicense",
+  "author": "Commenthol <commenthol@gmail.com>",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/commenthol/require-global-npm.git"
+  },
+  "scripts": {
+    "lint": "standard --env mocha",
+    "test": "mocha"
+  },
+  "engines": {}
+}
