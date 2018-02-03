@@ -1,6 +1,6 @@
 {
   "name": "require-global-npm",
-  "version": "1.0.0-0",
+  "version": "1.0.0",
   "description": "require npm from the global install",
   "keywords": [
     "global",
