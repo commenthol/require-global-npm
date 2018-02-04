@@ -14,7 +14,7 @@ module.exports = function requireNpm () {
     if (!npm) throw new Error('npm not found')
     return npm
   } catch (e) {
-    if (fs.existsSync(npmBin)) {
+    if (fs.statSync(npmBin)) {
       if (fs.lstatSync(npmBin).isSymbolicLink()) {
         npmBinPath = path.resolve(binDir, fs.readlinkSync(npmBin))
         npmPath = npmBinPath.replace(/^(.*\/node_modules\/npm)(?:(?!\/node_modules\/npm).)*?$/, '$1')
