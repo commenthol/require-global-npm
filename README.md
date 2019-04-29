@@ -9,9 +9,11 @@ No need to install `npm` in your project as it's already here...
 e.g. running `npm info require-global-npm` without cli
 
 ```js
+var requireNpm = require('require-global-npm')
 var npm = requireNpm()
+
 npm.load((err, _npm) => {
-  _npm.commands.view(['require-global-npm'], true, (err, data) => {
+  _npm.commands.info(['require-global-npm'], (err, data) => {
     // ...
   })
 })

@@ -11,25 +11,29 @@
   "bugs": {
     "url": "https://github.com/commenthol/require-global-npm/issues"
   },
-  "license": "Unlicense",
-  "author": "Commenthol <commenthol@gmail.com>",
-  "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/commenthol/require-global-npm.git"
   },
+  "license": "Unlicense",
+  "author": "commenthol <commenthol@gmail.com>",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
-    "lint": "standard --env mocha",
-    "test": "mocha"
+    "all": "npm run test",
+    "lint": "eslint \"*.js\" \"**/*.js\"",
+    "prepublishOnly": "npm run all",
+    "test": "mocha",
+    "posttest": "npm run lint"
   },
   "dependencies": {},
   "devDependencies": {
-    "mocha": "^5.0.0"
+    "eslint": "^5.16.0",
+    "mocha": "^6.1.4"
   },
   "engines": {
-    "node": ">=4"
+    "node": ">=6"
   }
 }

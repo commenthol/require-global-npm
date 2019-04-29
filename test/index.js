@@ -11,11 +11,11 @@ describe('requireNpm', function () {
 
   it('shall run npm info npm', function (done) {
     this.timeout(5000)
-
     var npm = requireNpm()
+
     npm.load((err, npm) => {
       assert.ok(!err, err && err.message)
-      npm.commands.view(['debug'], true, function (err, data) {
+      npm.commands.info(['debug'], function (err, data) {
         assert.ok(!err, err && err.message)
         assert.ok(typeof data === 'object')
         done()
